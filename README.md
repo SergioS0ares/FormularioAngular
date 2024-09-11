@@ -23,67 +23,80 @@ A instalação do Visual Studio Code é feita através [deste site](https://code
 
 Após a instalação do Node.js e do VSCode, você pode instalar o Angular através do terminal. Certifique-se de que o terminal tenha acesso ao npm. Você pode instalar o Angular CLI globalmente com o comando:
 
-```bash
-npm install -g @angular/cli
+
+- npm install -g @angular/cli
 
 ### Verificar Instalação do Angular CLI
 
 Para verificar se o Angular CLI foi instalado corretamente, execute:
 
-```bash
-ng version
+- ng version
 
-Criar um Novo Projeto Angular
+### Criar um Novo Projeto Angular
+
 Para criar um novo projeto Angular, execute o comando:
 
-ng new nome-do-seu-projeto --no-standalone
+- ng new nome-do-seu-projeto
 
-Ao criar o projeto, opte por usar SCSS como formato de folha de estilo.
 
-Executar o Aplicativo Angular
+Ao criar um projeto Angular, opte por usar **SCSS** como formato de folha de estilo.
+
+### Executar o Aplicativo Angular
+
 Para executar o aplicativo Angular, navegue até o diretório do seu projeto no terminal e execute os comandos:
 
-cd nome-do-seu-projeto
-ng serve
+- cd nome-do-seu-projeto
+- ng serve
 
-Este comando iniciará o servidor de desenvolvimento e abrirá automaticamente seu navegador padrão no endereço http://localhost:4200, onde você poderá visualizar seu aplicativo Angular em execução.
+Este comando iniciará o servidor de desenvolvimento e abrirá automaticamente seu navegador padrão no endereço [http://localhost:4200](http://localhost:4200), onde você poderá visualizar seu aplicativo Angular em execução.
 
-Estrutura do Projeto Angular
-node_modules: dependências do projeto
-src: onde programar a aplicação
-src/app: pasta principal para componentes, services, etc.
-Componentes: divididos em TS, HTML, SCSS e testes
-Comandos para Gerar Componentes e Módulos
-Gerar Componente: ng generate component 'nome do componente'
-Gerar Módulo: ng g m 'nome do módulo'
-Adicionar Angular Material ao Projeto: ng add @angular/material
-Adicionar Módulo com Rotas: ng g m 'nome do módulo de roteamento' --routing
-Lazy Loading
-O lazy loading é uma técnica utilizada no Angular para carregar módulos de forma assíncrona. Para implementar o lazy loading, você precisa definir uma rota especial usando a propriedade loadChildren no objeto de rota.
+### Estrutura do Projeto Angular
 
-Exemplo de Lazy Loading para a rota { path: 'lista' }:
+- **node_modules**: Dependências do projeto.
+- **src**: Onde programar a aplicação.
+- **src/app**: Pasta principal para componentes, services, etc.
+  - **Componentes**: Divididos em TS, HTML, SCSS e testes.
 
-{ path: 'lista', loadChildren: () => import('./lista/lista.module').then(m => m.ListaModule) }
+### Comandos para Gerar Componentes e Módulos
 
-Customização de Paletas de Cores
-Para ver paletas de cor, utilize este site.
+- **Gerar Componente**:
+  
+  - ng generate component 'nome-do-componente'
+  
+- **Gerar Módulo**: ng g m 'nome do módulo'
+  
+- **Adicionar Angular Material ao Projeto**: ng add @angular/material
+  
+- **Adicionar Módulo com Rotas**: ng g m 'nome do módulo de roteamento' --routing
+  
+### Lazy Loading
 
-Criação de Interface
+O lazy loading é uma técnica utilizada no Angular para carregar módulos de forma assíncrona. Para implementar o lazy loading, defina uma rota especial usando a propriedade `loadChildren` no objeto de rota.
 
-ng g interface lista/model/itensLista
+Exemplo de Lazy Loading para a rota `{ path: 'lista' }`:
 
-Compartilhar Imports do Angular Material
+- { path: 'lista', loadChildren: () => import('./lista/lista.module').then(m => m.ListaModule) }
 
-ng g m compartilhar/app-material
+### Customização de Paletas de Cores
 
-Criar a Classe Service
+- Para ver paletas de cor, utilize este [site](#).
 
-ng g s lista/services/lista
+### Criação de Interface
 
-Bootstrap
+- ng g interface lista/model/itensLista
+
+### Compartilhar Imports do Angular Material
+
+- ng g m compartilhar/app-material
+
+### Criar a Classe Service
+
+- ng g s lista/services/lista
+
+### Bootstrap
+
 Em resumo, a função principal do Bootstrap é fornecer uma base sólida e eficiente para o desenvolvimento de interfaces web responsivas. Ele economiza tempo e esforço dos desenvolvedores ao oferecer uma ampla gama de componentes e utilitários prontos para uso.
 
 Para instalar o Bootstrap:
 
-npm install @ng-bootstrap/ng-bootstrap
-
+- npm install @ng-bootstrap/ng-bootstrap
