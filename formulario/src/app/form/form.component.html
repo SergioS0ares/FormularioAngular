@@ -1,0 +1,20 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label for="nome">Nome:</label>
+    <input id="nome" formControlName="nome" required />
+  
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email" type="email" required />
+  
+    <label for="cpf">CPF:</label>
+    <input id="cpf" formControlName="cpf" required />
+  
+    <button type="submit">Enviar</button>
+  </form>
+  
+  <div *ngIf="form.valid">
+    <h3>Dados Submetidos:</h3>
+    <p><strong>Nome:</strong> {{ form.value.nome }}</p>
+    <p><strong>Email:</strong> {{ form.value.email }}</p>
+    <p><strong>CPF:</strong> {{ form.value.cpf }}</p>
+  </div>
+  

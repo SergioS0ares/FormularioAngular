@@ -1,1 +1,7 @@
-<p>form-view works!</p>
+<div *ngIf="item">
+    <h2>Detalhes do Formulário</h2>
+    <p><strong>Nome:</strong> {{ item.nome }}</p>
+    <p><strong>Email:</strong> {{ item.email }}</p>
+    <p><strong>CPF:</strong> {{ item.cpf }}</p>
+  </div>
+  

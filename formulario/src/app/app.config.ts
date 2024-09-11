@@ -1,10 +1,18 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms'; // Importar FormsModule
 
-import { routes } from './app.routes';
-import { provideHttpClient } from '@angular/common/http';
-import { provideClientHydration } from '@angular/platform-browser';
+// Componentes
+import { FormComponent } from './form.component';
 
-export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideClientHydration()]
-};
+@NgModule({
+  declarations: [
+    FormComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule // Adicionar FormsModule
+  ],
+  bootstrap: [FormComponent]
+})
+export class AppConfig { }

@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-form-table',
-  standalone: true,
-  imports: [],
   templateUrl: './form-table.component.html',
-  styleUrl: './form-table.component.scss'
+  styleUrls: ['./form-table.component.scss']
 })
-export class FormTableComponent {
+export class FormTableComponent implements OnInit {
+  data: any[] = [];
 
+  ngOnInit() {
+    this.data = FormComponent.getData(); // Obtém os dados estáticos do FormComponent
+  }
 }
